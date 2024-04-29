@@ -1,0 +1,21 @@
+---
+- hosts: localhost
+  tasks:
+    - name: Clone from RHEL template
+      ntnx_vms_clone:
+        state: present
+        nutanix_host: "{{ ncp_ip }}"
+        nutanix_username: "{{ ncp_username }}"
+        nutanix_password: "{{ ncp_password }}"
+        validate_certs: False
+        src_vm_uuid: "{{ vm_uuid }}"
+        networks:
+          - is_connected: true
+            subnet:
+              name: "{{ ncp_subnet_name }}"
+#        guest_customization:
+#          type: "cloud_init"
+#          script_path: "{{ script_path }}"
+#          is_overridable: True
+    register: result
+    ignore_errors: true
