@@ -9,3 +9,10 @@ default_folder: "293842vm"
 aap_ip: 10.38.17.54
 aap_user: admin
 aap_pw: nutanix
+
+## NCP Credentials
+ncp_ap:
+ncp_username:
+ncp_password:
+vm_uuid:
+ncp_subnetname:
