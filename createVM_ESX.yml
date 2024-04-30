@@ -9,9 +9,9 @@
         password: "{{ vcenter_pw }}"
         validate_certs: False
         name: "{{ vm_name }}"
-        template: rhel85
+        template: rhel89
         datacenter: "{{ datacenter_name }}"
         folder: /New
         state: poweredon
-        cluster: "Laws Cluster"
+        cluster: "PHX-SPOC005-1"
         wait_for_ip_address: yes
