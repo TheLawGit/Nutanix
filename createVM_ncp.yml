@@ -17,5 +17,5 @@
 #          type: "cloud_init"
 #          script_path: "{{ script_path }}"
 #          is_overridable: True
-    register: result
-    ignore_errors: true
+      register: result
+      ignore_errors: true
