@@ -2,7 +2,7 @@
 vcenter_ip: 10.2.81.21
 vcenter_user: PHX-SPOC017-4-User01
 vcenter_pw: nx2Tech083!
-datacenter_name: "2953333"
+datacenter_name: "295333"
 default_folder: "295333/vm"
 
 #AAP Credentials
