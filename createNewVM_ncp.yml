@@ -1,0 +1,27 @@
+---
+- name: Create RHEL 89 VM
+  hosts: localhost
+  collections:
+    - nutanix.ncp
+  module_defaults:
+    group/nutanix.ncp.ntnx:
+      nutanix_host: "{{ ncp_ip }}"
+      nutanix_username: "{{ ncp_username }}"
+      nutanix_password: "{{ ncp_password }}"
+      validate_certs: false
+  tasks:
+      - name: VM with Cluster, Network, Universal time zone, one Disk
+        ntnx_vms:
+          state: present
+          name: "{{ ncp_vm_name }}"
+          timezone: "Universal"
+          cluster:
+            name: "{{ ncp_cluster_name }}"
+          networks:
+            - is_connected: True
+              subnet:
+                name: "{{ ncp_subnet_name }}"
+          disks:
+            - type: "DISK"
+              size_gb: 10
+               bus: "PCI"
