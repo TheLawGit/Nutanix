@@ -1,0 +1,21 @@
+  - name: VM with CentOS-7-cloud-init image
+    ntnx_vms:
+      state: present
+      name: VM with CentOS-7-cloud-init image
+      timezone: "UTC"
+      nutanix_host: "{{ ip }}"
+      nutanix_username: "{{ username }}"
+      nutanix_password: "{{ password }}"
+      validate_certs: False
+      cluster:
+        name: "{{ cluster_name }}"
+      disks:
+        - type: "DISK"
+          size_gb: 10
+          clone_image:
+            name:  "{{ centos }}"
+          bus: "SCSI"
+      guest_customization:
+        type: "cloud_init"
+        script_path: "./cloud_init.yml"
+        is_overridable: True
