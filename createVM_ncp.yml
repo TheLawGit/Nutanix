@@ -23,4 +23,4 @@
 #          script_path: "{{ script_path }}"
 #          is_overridable: True
       register: result
-      ignore_errors: true
+#      ignore_errors: true
