@@ -10,7 +10,7 @@
       nutanix_password: "{{ ncp_password }}"
       validate_certs: false
   tasks:
-    - name: Get "{{ vm.name }}"
+    - name: Get VM info
       ntnx_vms_info:
         filter:
           vm_name: "{{ vm.name }}"
