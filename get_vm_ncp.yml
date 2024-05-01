@@ -14,5 +14,5 @@
       ntnx_vms_info:
         filter:
           vm_name: "{{ vm.name }}"
-        kind: vm
+#        kind: vm
       register: result
