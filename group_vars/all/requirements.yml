@@ -14,5 +14,5 @@ aap_pw: nutanix
 ncp_ip: 10.38.7.199
 ncp_username: admin
 ncp_password: nx2Tech858!
-vm_uuid: 8c45970d-e75e-4ea1-b1e2-df1a8be9dacd
+vm_uuid: 03f1ba71-4541-4c95-9eee-625688ffeaab
 ncp_subnet_name: Primary
