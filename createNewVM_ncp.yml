@@ -24,4 +24,4 @@
           disks:
             - type: "DISK"
               size_gb: 10
-               bus: "PCI"
+              bus: "PCI"
