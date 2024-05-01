@@ -13,6 +13,6 @@
     - name: Get VM info
       ntnx_vms_info:
         filter:
-          vm_name: "{{ vm.name }}"
+          vm_name: "{{ ncp_vm }}"
 #        kind: vm
       register: result
